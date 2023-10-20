@@ -1,4 +1,6 @@
 #pragma once
+#include "MyForm1.h"
+
 
 namespace Kursovaya1 {
 
@@ -8,6 +10,7 @@ namespace Kursovaya1 {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::IO;
 
 	/// <summary>
 	/// Сводка для MyForm
@@ -41,6 +44,7 @@ namespace Kursovaya1 {
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::Button^ button5;
 	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::OpenFileDialog^ openFileDialog1;
 
 	private:
 		/// <summary>
@@ -61,6 +65,7 @@ namespace Kursovaya1 {
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->openFileDialog1 = (gcnew System::Windows::Forms::OpenFileDialog());
 			this->SuspendLayout();
 			// 
 			// button1
@@ -106,8 +111,9 @@ namespace Kursovaya1 {
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(400, 70);
 			this->button5->TabIndex = 4;
-			this->button5->Text = L"button5";
+			this->button5->Text = L"Выход";
 			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
 			// 
 			// textBox1
 			// 
@@ -116,6 +122,10 @@ namespace Kursovaya1 {
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(800, 350);
 			this->textBox1->TabIndex = 5;
+			// 
+			// openFileDialog1
+			// 
+			this->openFileDialog1->FileName = L"openFileDialog1";
 			// 
 			// MyForm
 			// 
@@ -136,8 +146,19 @@ namespace Kursovaya1 {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-
-
+		String^ fileName = "";
+		String^ Text_For_Search ="";
+		if (openFileDialog1->ShowDialog() == Windows::Forms::DialogResult::OK) {
+			fileName = openFileDialog1->FileName;
+		}
+		//StreamReader^ file = File::OpenText(fileName);
+		//Text_For_Search = file->ReadToEnd();
+		MyForm1^ Window = gcnew MyForm1();
+		Window->Show();
+		
+	}
+	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+	Close();
 	}
 };
 }

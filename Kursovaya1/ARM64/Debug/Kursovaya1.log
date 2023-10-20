@@ -1,5 +1,5 @@
 ﻿  MyForm.cpp
-  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  MyForm1.cpp
   Создание кода...
   MyForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
   Kursovaya1.vcxproj -> C:\Users\vladi\source\repos\Coursework1\ARM64\Debug\Kursovaya1.exe

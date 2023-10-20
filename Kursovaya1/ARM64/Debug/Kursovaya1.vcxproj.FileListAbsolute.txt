@@ -4,3 +4,4 @@ C:\Users\vladi\source\repos\Kursovaya1\Kursovaya1\ARM64\Debug\Kursovaya1.vcxproj
 C:\Users\vladi\source\repos\Coursework1\Kursovaya1\ARM64\Debug\Kursovaya1.vcxproj.AssemblyReference.cache
 C:\Users\vladi\source\repos\Coursework1\Kursovaya1\ARM64\Debug\Kursovaya1.MyForm.resources
 C:\Users\vladi\source\repos\Coursework1\Kursovaya1\ARM64\Debug\Kursovaya1.vcxproj.GenerateResource.cache
+C:\Users\vladi\source\repos\Coursework1\Kursovaya1\ARM64\Debug\Kursovaya1.MyForm1.resources
